@@ -1,0 +1,121 @@
+$padding:10px;
+@font-face {
+    font-family: 'Novecentowide';
+    src: url("/../fonts/Novecentosanswide-Normal-webfont.woff") format('woff'),  
+    url("/../fonts/Novecentosanswide-Medium-webfont.woff") format('woff'), 
+    url("/../fonts/Novecentosanswide-Bold-webfont.woff") format('woff'),
+    url("/../fonts/Novecentosanswide-Bold-webfont.woff2") format('woff2'), 
+    // url("/../fonts/Novecentosanswide-Book-webfont.woff") format('woff'), 
+    // url("/../fonts/Novecentosanswide-Book-webfont.woff2") format('woff2'), 
+    url("/../fonts/Novecentosanswide-Light-webfont.woff") format('woff'), 
+    url("/../fonts/Novecentosanswide-Medium-webfont.woff2") format('woff2'),   
+    url("/../fonts/Novecentosanswide-Normal-webfont.woff2") format('woff2'); 
+}
+
+    @font-face {
+    font-family: 'Novecentowide-Book';
+    src:url("/../fonts/Novecentosanswide-Book-webfont.woff") format('woff'), 
+    url("/../fonts/Novecentosanswide-Book-webfont.woff2") format('woff2');
+}
+
+$font:'Novecentowide';
+
+body {
+
+    max-width: 1920px; 
+    margin: 0 auto;
+    font-family: 'Novecentowide';
+    p {font-size: 16px;}
+    h1 {color: #455560;
+        font-size: 80px;
+        font-weight: 300;
+        line-height: 86px;}
+}
+
+
+.one {
+    h2 {
+        color: #a29061;
+font-size: 60px;
+font-weight: 300;
+line-height: 66px;
+    }
+}
+.two { 
+   background-position: center;
+    background:url("./../img/sekcja2-1.jpg");
+   background-size: cover;
+   opacity: 0.95;    
+   padding: 50px; 
+   position: relative;
+   
+
+   &:before {background-color: #5d6871;
+    background-color: #5d6871;
+    opacity: 0.33;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin-top: -50px; // equal to padding of parent 
+    margin-left: -50px; // equal to padding of parrent 
+    }
+}
+section {
+    padding: $padding;
+}
+header {
+    padding: $padding;
+    .logo {display: inline-block;
+    
+    @media (max-width:767px) {
+        margin: 0 auto;
+        display: block;
+        padding: 10px;
+    }
+        img {
+            @media (max-width:767px) {
+                margin: 0 auto;
+                display: block;}
+        }
+    
+    }
+    nav {
+        display: inline-block;
+        float: right;
+        ul {}
+        li {display: inline-block;
+        
+            color: #a29061;
+            font-family: "Novecentowide-Book";
+            font-size: 18px;
+            font-weight: 400;
+            // Text style for "Home"
+            color: #4d565d;
+            letter-spacing: 0.05px;
+            // Text style for "Produkty"
+            letter-spacing: 0.05px;
+        
+        }
+        a{}
+    }
+}
+
+footer {
+    padding: $padding;
+}
+
+
+.btn {
+    border-radius: 100%;
+    height: 219px;
+    width: 219px;
+    background-color: #af9a63;
+    display: flex;
+
+    a{
+        text-decoration: none;
+        text-align: center;
+        margin: auto;
+    }
+}

@@ -1,0 +1,136 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Netkata</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="./img/logo.jpg" alt="logo" ></div>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Produkty</li>
+                    <li>O firmie</li>
+                    <li>Aktualności</li>
+                    <li>Media</li>
+                    <li>Znajdź klinikę</li>
+                    <li>Kontakt</li>
+                    <li>Szukaj</li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <section class="one">
+            <div id="slider1">
+                <div class="slideTop">
+                    <h1>Lorem ipsum <span class='next-line'></span>dolor sit amet</h1>
+                    <h2>Sed ut perspiciatis<span class='next-line'></span> unde omnis iste </h2>
+                </div>
+                <div class="slideTop"></div>
+                <div class="slideTop"></div>
+                <div class="slideTop"></div>
+            </div>    
+            <a href="#" id='nextSlide'><img src="./img/arrow-bottom.png" alt="next" ></a>
+        </section>
+
+        <section class="two">
+            <h2>Witamy na stronie</h2>
+            <h3>podtytuł lorem ipsum dolor</h3>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,             similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+            </p>
+            <p> 
+                Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+            </p>
+            <p> Temporibus autem quibusdam et aut officiis debitis aut rerum 
+                necessitatibus saepe eveniet ut et voluptates repudiandae sint 
+                et molestiae non recusandae. Itaque earum rerum hic tenetur 
+                a sapiente delectus, ut aut reiciendis voluptatibus maiores alias.
+            </p>
+            <div class="btn">
+                <a href="http://">czytaj więcej »</a>
+            </div>
+        
+        </section>
+
+        <section class="three">
+            <h2>Aktualności</h2>
+            <h4>27.10.2015</h4>
+
+            <h3>Tytuł newsa, bardzo długi tytuł,<span class='next-line'></span>
+                który nie mieści się w linijce</h3>
+                 <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum        deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+                    provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum. 
+                </p>
+                <p>
+                    Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est  eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis          voluptas assumenda est, omnis dolor repellendus.       
+                    Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet uet voluptates 
+                    repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapientdelectus, ut aut r
+                    eiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiorerepellat.
+                </p>
+            <div class="btn">
+                <a href="http://">czytaj więcej »</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li>Strona Główna</li>
+                <li>Produkty</li>
+                <li>Media</li>
+                <li>O Firmie</li>
+                <li>Znajdź klinikę</li>
+                <li>Aktualności</li>
+                <li>Kontakt</li>
+                <li>General</li>
+                <li>Serwis</li>
+            </ul>
+        </nav>
+
+        <div class="newsletter">
+            <h3>Newsletter:</h3>
+            <input type="email" id="mail" name="user_mail"><button><label for="mail">zapisz się »</label></button>
+        </div>
+        <div class="bottom"><img src="" alt="" srcset=""><p>NETKATA S.C. ul. Nowy Świat 5/11, 00-492 Warszawa, tel +48 505 034 253, e-mail: info@netkata.com</p>
+            <p class="copyright">Copyright by © NETKATA 2016</p>
+        </div>
+
+<script>
+
+window.onload = function(){
+var slider1=document.getElementById('slider1');     
+var slides=document.getElementsByClassName('slideTop');  
+// var countingSlides =0; 
+var activeSlide=0; 
+
+function NextSlide(arg){
+activeSlide+=arg; 
+
+return false; //for no warnings in console
+}
+
+
+function slider(){
+    //iteration + active elem 
+    for (var i=0; i < slides.length; i++){
+        slides[i].classList.add('hide', 'fadeOut'); //need to add those class in css  
+
+    }; 
+
+     if(activeSlide ===slides.length){
+         activeSlide=0; //reset 
+    };}   
+
+
+var sliderNext =document.getElementById('nextSlide');
+sliderNext.addEventListener('click', NextSlide, false ); 
+var arg=1 //always next slide 
+;}
+</script>
+</footer>
+</body>
+</html>
